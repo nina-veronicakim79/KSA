@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Digital Portfolio - Serene Professional</title>
+<!-- Google Fonts: Manrope -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols for Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            manrope: ['Manrope', 'sans-serif'],
+          },
+          colors: {
+            emerald: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b',
+            },
+            stone: {
+              50: '#fafaf9',
+              200: '#e7e5e4',
+              400: '#a8a29e',
+              500: '#78716c',
+              600: '#57534e',
+              800: '#292524',
+              900: '#1c1917',
+              950: '#0c0a09',
+            }
+          },
+          borderRadius: {
+            'custom': '8px',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-animations">
+    .active-scale:active {
+      transform: scale(0.95);
+      transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .nav-float:active {
+      transform: translateY(-2px);
+      transition: transform 200ms ease;
+    }
+  </style>
+</head>
+<body class="bg-stone-50 font-manrope text-stone-900 antialiased selection:bg-emerald-100 mb-24">
+<!-- BEGIN: TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-emerald-50 shadow-[0_4px_20px_rgba(6,78,59,0.04)]">
+<div class="flex justify-between items-center px-6 py-4 max-w-screen-xl mx-auto">
+<div class="flex items-center gap-3">
+<!-- Leading Avatar as described in components -->
+<div class="w-8 h-8 rounded-full overflow-hidden bg-emerald-100 border border-emerald-200">
+<img alt="Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDX9vilebY6Ih_ZCZ865_Fdvn4swgCqDB_orGSJ_3IdNS8GZ0pNC20VYOPjhkfoU7LhQb2mnRXrU4wNELMcH99DmjiVELIs8oQ4e5hmeEXNWTH9oVnWAsrvx7it9_rM3DdDfD9bEC02MLkiMZv2fzqu6pDZ_e0LP2kctRwU5NMdk0YER9PMqfSGRFonzV8yCwvzxkurH4pR0D4Ghcyvsc_1RYZiMM06SdPl-0oDkyb5QrLFK-eh50dx2M8n9wqSkRjDF5fm8ZgMRxRL"/>
+</div>
+<span class="text-lg font-bold text-emerald-900 tracking-tight">Digital Portfolio</span>
+</div>
+<button class="p-2 rounded-lg hover:bg-emerald-50 transition-colors text-emerald-900 active-scale">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<!-- END: TopAppBar -->
+<main class="pt-24 px-6 max-w-md mx-auto">
+<!-- BEGIN: Header Section (Profile & Bio) -->
+<section class="flex gap-6 mb-12" data-purpose="profile-header">
+<!-- Profile Image - Matches Sketch (Rounded Square) -->
+<div class="w-32 h-32 flex-shrink-0 bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden">
+<img alt="Professional Headshot" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZjzCK0OXJJhhp38ScyJC-dCb1SPZHbQtzgiECI8r1wH77xRP0bfl-C0zSagMACLrfBqmYNhCkoy-hEyNOFfUT23dTDN6qvJT9Bv2vTSF_g8SvEsnKxGWlxD5K4fv-usF9F-GYpAVbX6mDwdE8MxioL_M_avzAMDKKlGBQB15ncSmK3ZZsobkXaf_Lm0s9hKPtY2Gzroqnf-I6nquCOBJkw2uKtVQhOq42K30lWN_xlhEtZXQn1xZIUPWDSP0clPZOxr4LUbD0mfog"/>
+</div>
+<!-- Bio/Introduction -->
+<div class="flex flex-col justify-center gap-2">
+<div>
+<h1 class="text-2xl font-extrabold text-stone-900 tracking-tight">Alex Rivera</h1>
+<p class="text-emerald-700 font-semibold text-sm uppercase tracking-wider">Product Designer</p>
+</div>
+<p class="text-stone-500 text-sm leading-relaxed">
+          Crafting serene digital experiences with precision and purpose.
+        </p>
+<!-- Social Icons -->
+<div class="flex gap-3 mt-1">
+<a class="text-stone-400 hover:text-emerald-700 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</a>
+<a class="text-stone-400 hover:text-emerald-700 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</a>
+<a class="text-stone-400 hover:text-emerald-700 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">alternate_email</span>
+</a>
+</div>
+</div>
+</section>
+<!-- END: Header Section -->
+<!-- BEGIN: Main Content (Cards) -->
+<section class="flex flex-col gap-6" data-purpose="navigation-cards">
+<!-- Portfolio Card -->
+<article class="group relative overflow-hidden bg-white p-6 rounded-2xl shadow-[0_4px_12px_rgba(0,0,0,0.03)] border border-stone-100 hover:border-emerald-200 transition-all active-scale">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-emerald-50 rounded-xl text-emerald-700">
+<span class="material-symbols-outlined">folder_special</span>
+</div>
+<span class="material-symbols-outlined text-stone-300 group-hover:text-emerald-500 transition-colors">arrow_forward</span>
+</div>
+<h3 class="text-lg font-bold text-stone-900 mb-1">Portfolio</h3>
+<p class="text-sm text-stone-500">View selected projects and case studies.</p>
+</article>
+<!-- Experience Card -->
+<article class="group relative overflow-hidden bg-white p-6 rounded-2xl shadow-[0_4px_12px_rgba(0,0,0,0.03)] border border-stone-100 hover:border-emerald-200 transition-all active-scale">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-emerald-50 rounded-xl text-emerald-700">
+<span class="material-symbols-outlined">work</span>
+</div>
+<span class="material-symbols-outlined text-stone-300 group-hover:text-emerald-500 transition-colors">arrow_forward</span>
+</div>
+<h3 class="text-lg font-bold text-stone-900 mb-1">Experience</h3>
+<p class="text-sm text-stone-500">Explore professional background and skills.</p>
+</article>
+<!-- About Me Card -->
+<article class="group relative overflow-hidden bg-white p-6 rounded-2xl shadow-[0_4px_12px_rgba(0,0,0,0.03)] border border-stone-100 hover:border-emerald-200 transition-all active-scale">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-emerald-50 rounded-xl text-emerald-700">
+<span class="material-symbols-outlined">person</span>
+</div>
+<span class="material-symbols-outlined text-stone-300 group-hover:text-emerald-500 transition-colors">arrow_forward</span>
+</div>
+<h3 class="text-lg font-bold text-stone-900 mb-1">About Me</h3>
+<p class="text-sm text-stone-500">Learn about my philosophy and process.</p>
+</article>
+</section>
+<!-- END: Main Content -->
+</main>
+<!-- BEGIN: Footer -->
+<footer class="mt-12 w-full py-12 px-6 flex flex-col items-center gap-6 border-t border-stone-200 bg-stone-50">
+<div class="text-emerald-900 font-bold text-lg">Alex Rivera</div>
+<div class="flex gap-6">
+<a class="text-stone-500 hover:text-emerald-700 transition-colors text-sm underline underline-offset-4" href="#">LinkedIn</a>
+<a class="text-stone-500 hover:text-emerald-700 transition-colors text-sm underline underline-offset-4" href="#">GitHub</a>
+<a class="text-stone-500 hover:text-emerald-700 transition-colors text-sm underline underline-offset-4" href="#">Email</a>
+</div>
+<p class="text-stone-400 text-xs text-center leading-relaxed font-manrope">
+      © 2024 Corporate Modern Portfolio.<br/>Built with precision.
+    </p>
+</footer>
+<!-- END: Footer -->
+<!-- BEGIN: BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white border-t border-emerald-50 shadow-[0_-4px_20px_rgba(6,78,59,0.06)] rounded-t-2xl z-50">
+<!-- Home Tab (Active) -->
+<a class="flex flex-col items-center justify-center text-emerald-900 bg-emerald-50 rounded-xl px-4 py-1 nav-float" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-manrope text-[11px] font-medium uppercase tracking-wider mt-0.5">Home</span>
+</a>
+<!-- Work Tab -->
+<a class="flex flex-col items-center justify-center text-stone-400 hover:text-emerald-600 transition-colors nav-float" href="#">
+<span class="material-symbols-outlined">folder_special</span>
+<span class="font-manrope text-[11px] font-medium uppercase tracking-wider mt-0.5">Work</span>
+</a>
+<!-- Contact Tab -->
+<a class="flex flex-col items-center justify-center text-stone-400 hover:text-emerald-600 transition-colors nav-float" href="#">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-manrope text-[11px] font-medium uppercase tracking-wider mt-0.5">Contact</span>
+</a>
+</nav>
+<!-- END: BottomNavBar -->
+</body></html>ㅋ
